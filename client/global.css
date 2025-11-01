@@ -1,0 +1,108 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * Colors must be HSL components (no hsl() wrapper here), as expected by tailwind.config.ts
+  */
+  :root {
+    /* Neutrals - Darker Theme */
+    --background: 0 0% 8%; /* Very Dark #141414 */
+    --foreground: 0 0% 95%; /* Light Gray #F2F2F2 */
+
+    --card: 0 0% 12%; /* Dark Card #1F1F1F */
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Brand */
+    --primary: 14 28% 24%; /* Deep Brown #4E342E */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 18%; /* Darker Secondary #2E2E2E */
+    --secondary-foreground: 0 0% 95%;
+
+    --accent: 45 100% 51%; /* Amber #FFC107 */
+    --accent-foreground: 0 0% 13%;
+
+    --gold: 45 100% 51%;
+    --gold-foreground: 0 0% 13%;
+
+    /* UI */
+    --muted: 0 0% 15%; /* Dark Muted #262626 */
+    --muted-foreground: 0 0% 65%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%; /* Darker Border #333333 */
+    --input: 0 0% 20%;
+    --ring: 45 100% 51%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar (kept consistent) */
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 14 28% 24%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 45 100% 51%;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 13%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 13%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 14 28% 24%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 13%;
+
+    --gold: 45 100% 51%;
+    --gold-foreground: 0 0% 13%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 70%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 24%;
+    --input: 0 0% 24%;
+    --ring: 45 100% 51%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 14 28% 24%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 24%;
+    --sidebar-ring: 45 100% 51%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground antialiased; font-feature-settings: "liga" on; }
+  h1,h2,h3,h4 { @apply font-heading; }
+}
